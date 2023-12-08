@@ -255,6 +255,10 @@ ifneq (,$(filter $(TARGET_PRODUCT), mondrian))
 	CDEFINES += -DCONFIG_TARGET_PRODUCT_MONDRIAN
 endif
 
+ifneq (,$(filter $(TARGET_PRODUCT), marble))
+	CDEFINES += -DCONFIG_TARGET_PRODUCT_MARBLE
+endif
+
 KBUILD_CPPFLAGS += $(CDEFINES)
 
 # Currently, for versions of gcc which support it, the kernel Makefile
